@@ -1,0 +1,11 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "Primary"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( )
+	then
+		colfax.setPrimary( "Y" );
+end

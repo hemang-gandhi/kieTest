@@ -1,0 +1,11 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "Status - Change"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( coverageStatus == "4" )
+	then
+		colfax.setStatus( "Change" );
+end

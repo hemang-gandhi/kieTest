@@ -1,0 +1,13 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "DOB Year"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( dob : dateOfBirth != null , dateOfBirth != "" )
+	then
+		CommonUtil cu = new CommonUtil();
+		insert( cu );
+		cu.getDobSubString( dob, 0, 4, colfax, "dobYear" );
+end

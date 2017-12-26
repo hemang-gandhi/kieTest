@@ -1,0 +1,14 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "Home Phone"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( homePhone : homePhone != null , homePhone != "" )
+	then
+		ColfaxInfoArmorAttributes colfaxInfoArmor = new ColfaxInfoArmorAttributes();
+		insert( colfaxInfoArmor );
+		colfaxInfoArmor.getDobSubString( homePhone, 3, 10 );
+		colfax.setHomePhone( colfaxInfoArmor.getResult() );
+end

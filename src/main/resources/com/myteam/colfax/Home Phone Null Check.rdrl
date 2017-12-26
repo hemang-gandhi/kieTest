@@ -1,0 +1,11 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "Home Phone Null Check"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( homePhone == "" )
+	then
+		colfax.setHomePhone( "0000000" );
+end

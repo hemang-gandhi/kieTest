@@ -1,0 +1,11 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "Status - Add"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( coverageStatus != "3" )
+	then
+		colfax.setStatus( "Add" );
+end

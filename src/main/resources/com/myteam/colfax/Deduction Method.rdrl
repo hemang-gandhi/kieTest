@@ -1,0 +1,11 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "Deduction Method"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( employerPaidPremium == "000" )
+	then
+		colfax.setDeductionMethod( "Employer payroll deduction" );
+end

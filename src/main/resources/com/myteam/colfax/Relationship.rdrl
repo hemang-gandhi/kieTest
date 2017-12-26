@@ -1,0 +1,11 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "Relationship"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( )
+	then
+		colfax.setRelationship( "P" );
+end

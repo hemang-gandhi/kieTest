@@ -1,0 +1,13 @@
+package com.myteam.colfax;
+
+import java.lang.Number;
+
+rule "Plan Type"
+	dialect "mvel"
+	when
+		colfax : ColfaxInfoArmorAttributes( benefitPlanTier : benefitPlanTier != null )
+	then
+		LookupTableUtil lu = new LookupTableUtil();
+		insert( lu );
+		lu.getLookupValue( "PlanType", benefitPlanTier, colfax, "planType" );
+end
