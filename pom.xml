@@ -3,10 +3,10 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.myteam.colfax</groupId>
-  <artifactId>Colfax-InfoArmorIdentityTheft</artifactId>
-  <version>1.0.59</version>
+  <artifactId>Repo1</artifactId>
+  <version>1.0.0</version>
   <packaging>kjar</packaging>
-  <name>Colfax - InfoArmor Identity Theft</name>
+  <name>Repo1</name>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
