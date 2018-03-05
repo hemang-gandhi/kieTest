@@ -2,14 +2,16 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.alight.idis</groupId>
-  <artifactId>Repo1</artifactId>
+  <parent>
+    <groupId>com.alight.idis</groupId>
+    <artifactId>Repo1</artifactId>
+    <version>1.0.0</version>
+  </parent>
+  <groupId>com.myteam</groupId>
+  <artifactId>PushProj</artifactId>
   <version>1.0.0</version>
-  <packaging>pom</packaging>
-  <name>Repo1</name>
-  <modules>
-    <module>PushProj</module>
-  </modules>
+  <name>PushProj</name>
+  <description>default description</description>
   <repositories>
     <repository>
       <id>guvnor-m2-repo</id>
@@ -17,14 +19,4 @@
       <url>http://localhost:8080/kie-wb/maven2/</url>
     </repository>
   </repositories>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.kie</groupId>
-        <artifactId>kie-maven-plugin</artifactId>
-        <version>7.0.0.Final</version>
-        <extensions>true</extensions>
-      </plugin>
-    </plugins>
-  </build>
 </project>
