@@ -1,0 +1,9 @@
+package com.myteam.pushproj;
+
+import java.lang.Number;
+
+rule "kjj"
+	dialect "mvel"
+	when
+	then
+end
