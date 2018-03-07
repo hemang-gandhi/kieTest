@@ -1,0 +1,9 @@
+package com.myteam.test1project;
+
+import java.lang.Number;
+
+rule "test1"
+	dialect "mvel"
+	when
+	then
+end
